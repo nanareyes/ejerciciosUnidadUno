@@ -1,5 +1,6 @@
 package co.edu.utp.misiontic2022.c2;
 
+import java.io.IOException;
 import java.util.*;
 import java.util.Scanner;
 
@@ -73,11 +74,28 @@ public class App {
      */
 
     // Programa que lea un número entero y muestre si el número es múltiplo de 10
-    public static void main(String[] args) {
+    /*
+     * public static void main(String[] args) {
+     * 
+     * Scanner sca = new Scanner(System.in); int numero;
+     * System.out.println("Digite un número: "); numero = sca.nextInt(); if (numero
+     * % 10 == 0) System.out.println("El número es múltiplo de 10"); else
+     * System.out.println("El número no es múltiplo de 10"); }
+     */
 
+    // Programa que lea un carácter por teclado y compruebe si es una letra
+    // mayúscula
+    public static void main(String[] args) throws IOException {
         Scanner sca = new Scanner(System.in);
-
-
-
-
+        char letra;
+        System.out.println("Digite una letra: ");
+        letra = (char) System.in.read();
+        if (Character.isUpperCase(letra))
+            System.out.println(letra + " : Es una letra mayúscula");
+        else
+            System.out.println(letra + " : Es una letra minúscula");
+    }
 }
+
+// public static void main(String[] args) {
+// Scanner sca = new Scanner(System.in);
